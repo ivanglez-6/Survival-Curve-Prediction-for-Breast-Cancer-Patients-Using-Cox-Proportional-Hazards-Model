@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prognosis Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Breast Cancer Prognosis Assistant</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#">About</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Personalized Prognosis for Breast Cancer Patients</h2>
+            <p>This clinical decision support system helps oncologists explore survival predictions based on clinical, tumor, and treatment data.</p>
+            <a class="start-button" href="/input">Start</a>
+        </section>
+
+        <section class="how-it-works">
+            <h3>How It Works</h3>
+            <div class="steps">
+                <div>
+                    <h4>1. Input Patient Data</h4>
+                    <p>Demographics, tumor characteristics, and treatments</p>
+                </div>
+                <div>
+                    <h4>2. View Survival Curve</h4>
+                    <p>Personalized survival curve based on Cox model</p>
+                </div>
+                <div>
+                    <h4>3. Understand Key Drivers</h4>
+                    <p>SHAP-based feature importance explained with AI assistance</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-output">
+            <h3>Example Output</h3>
+            <div class="placeholder">[ Survival Curve & Interpretation ]</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Prognosis Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
