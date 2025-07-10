@@ -5,7 +5,7 @@
     <title>Input Patient Data</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="input-page">
     <header>
         <h1>Patient Data Input</h1>
         <nav>
@@ -16,50 +16,88 @@
 
     <main class="form-section">
         <h2>Enter Clinical and Demographic Information</h2>
-        <form method="post">
-            <label>Age:
-                <input type="number" name="age" required>
-            </label>
+        <form method="post" class="two-column-form">
+            <div class="form-grid">
+                <label>Age:
+                    <input type="number" name="age" required>
+                </label>
 
-            <label>Gender:
-                <select name="gender" required>
-                    <option value="">-- Select --</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                </select>
-            </label>
+                <label>Chemotherapy:
+                    <select name="chemo" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </label>
 
-            <label>Tumor Size (mm):
-                <input type="number" name="tumor_size" required>
-            </label>
+                <label>Hormonal Therapy:
+                    <select name="hormonal" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </label>
 
-            <label>Node Involvement:
-                <input type="number" name="nodes" required>
-            </label>
+                <label>Amputation:
+                    <select name="amputation" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </label>
 
-            <label>Hormone Therapy:
-                <select name="hormone_therapy" required>
-                    <option value="">-- Select --</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </label>
+                <label>Tumor Diameter (mm):
+                    <input type="number" name="diam" required>
+                </label>
 
-            <label>Chemotherapy:
-                <select name="chemo" required>
-                    <option value="">-- Select --</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </label>
+                <label>Positive Nodes:
+                    <input type="number" name="posnodes" required>
+                </label>
 
-            <label>Radiation Therapy:
-                <select name="radiation" required>
-                    <option value="">-- Select --</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </label>
+                <label>Grade:
+                    <select name="grade" required>
+                        <option value="">-- Select --</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                    </select>
+                </label>
+
+                <label>Angioinvasion:
+                    <select name="angioinv" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">No</option>
+                        <option value="1">Focal</option>
+                        <option value="2">Extensive</option>
+                    </select>
+                </label>
+
+                <label>Lymphocytic Infiltration:
+                    <select name="lymphinfil" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">None</option>
+                        <option value="1">Moderate</option>
+                        <option value="2">Extensive</option>
+                    </select>
+                </label>
+
+                <label>Estrogen Receptor Status:
+                    <select name="er_status" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">Negative</option>
+                        <option value="1">Positive</option>
+                    </select>
+                </label>
+
+                <label>Histological Type:
+                    <select name="histtype" required>
+                        <option value="">-- Select --</option>
+                        <option value="1">Ductal</option>
+                        <option value="1">Lobular</option>
+                        <option value="3">Other</option>
+                    </select>
+                </label>
+            </div>
 
             <button type="submit">Submit</button>
         </form>
@@ -70,3 +108,4 @@
     </footer>
 </body>
 </html>
+
