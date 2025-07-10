@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prediction Input Summary</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/input">Input</a>
+        </nav>
+    </header>
+
+    <main class="form-section">
+        <h2>Patient Data</h2>
+        <ul>
+            {% for key, value in patient.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Predicted Survival Curve</h2>
+        {% if plot %}
+            <img src="{{ url_for('static', filename=plot) }}" alt="Survival Curve">
+        {% else %}
+            <p>No plot available.</p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Prognosis Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>

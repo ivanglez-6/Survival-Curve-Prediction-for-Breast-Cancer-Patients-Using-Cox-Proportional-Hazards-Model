@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Patient Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Patient Data Input</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/input">Input</a>
+        </nav>
+    </header>
+
+    <main class="form-section">
+        <h2>Enter Clinical and Demographic Information</h2>
+        <form method="post">
+            <label>Age:
+                <input type="number" name="age" required>
+            </label>
+
+            <label>Gender:
+                <select name="gender" required>
+                    <option value="">-- Select --</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </label>
+
+            <label>Tumor Size (mm):
+                <input type="number" name="tumor_size" required>
+            </label>
+
+            <label>Node Involvement:
+                <input type="number" name="nodes" required>
+            </label>
+
+            <label>Hormone Therapy:
+                <select name="hormone_therapy" required>
+                    <option value="">-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+
+            <label>Chemotherapy:
+                <select name="chemo" required>
+                    <option value="">-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+
+            <label>Radiation Therapy:
+                <select name="radiation" required>
+                    <option value="">-- Select --</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Prognosis Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
